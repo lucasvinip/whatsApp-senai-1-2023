@@ -56,9 +56,9 @@
     display: flex;
 }
 
-#baloons{
+.baloons{
     width: 49vw;
-    height: 35vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -68,33 +68,36 @@
 .me_baloon{
     height: 8vh;
     width: 20vw;
-    background-color: #50aa79;
+    background-color: #00a884;
     border-radius: 20px  0px 20px 20px;
     max-width: 50%;
     display: flex;
     place-self: end;
+    border: 1px solid #00a884;
     
 }
 .other_baloon{
     height: 8vh;
     width: 20vw;
-    background-color: white;
+    background-color: rgb(0,128,105,0.08);
     border-radius: 0px 20px 20px 20px;
     max-width: 50%;
     display: flex;
+    border: 1px solid rgb(0,128,105,0.08);
 }
 .text{
     font-size: 0.7rem;
     padding: 6px;
-}
-.textTwo{
-    font-size: 0.7rem;
-    padding: 6px;
+    color: #111B21;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .conversation__footer{
-    height: 11vh;
+    height: 15vh;
     width: 49vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .write{
     display: flex;

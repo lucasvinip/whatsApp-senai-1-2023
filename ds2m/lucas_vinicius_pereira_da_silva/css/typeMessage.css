@@ -1,0 +1,42 @@
+.typeMessage{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    
+}
+
+.typeMessage div{
+    width: 100%;
+}
+
+.typeMessage div input{
+    width: 100%;
+    outline: none;
+    border: none;
+    background: #fff;
+    padding: 6px;
+    height: 38px;
+    border-radius: 30px;
+    font-size: 14px;
+    padding-left: 40px;
+}
+
+.typeMessage div input::placeholder{
+    color: #bbb;
+    
+}
+.typeMessage input{
+    width: 100%;
+    outline: none;
+    border: none;
+    background: #fff;
+    padding: 6px;
+    height: 38px;
+    border-radius: 30px;
+    font-size: 14px;
+}

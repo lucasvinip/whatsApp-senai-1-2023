@@ -1,10 +1,12 @@
 'use scrict'
 
-// import { contatos } from "./recursos/contatos.js"
+import { contatos } from "./recursos/contatos.js"
+
 
 // adicionei o index dos elementos
-const createCard = (contacts, index) => {
-    
+
+const createCard = (contacts) => {
+
     const card = document.createElement('button')
     card.classList.add('chat__box');
 
@@ -34,28 +36,32 @@ const createCard = (contacts, index) => {
     card.append(photo__chat, name__chat, linha)
 
     card.onclick = function () {
-        seeMessage(index);
+        seeMessage(contacts)
     };
 
     return card
 }
 
-const seeMessage = (index) => {
+const seeMessage = (contacts) => {
 
     let conversation = document.getElementById('conversation');
     conversation.classList.remove('d-none');
 
     let name__conversation = document.getElementById('name__conversation');
-    let container_baloons = document.getElementById('baloons');
+    name__conversation.textContent = contacts.name;
 
-    name__conversation.textContent = contatos[index].name;
+    let photo = document.getElementById('img__conversation')
+    photo.src = `./recursos/${contacts.image}`
+
+    let conversation__main = document.getElementById('conversation__main');
+
+    let container_baloons = document.createElement('div')
+    container_baloons.classList.add('baloons')
+
 
     // VERIFICAR SE EXISTE UMA CONVERSA ANTIGA
     // SE TIVER, APAGAR ELA
-
-
-    contatos[index].messages.forEach(element => {
-
+    contacts.messages.forEach(element => {
         if (element.sender == 'me') {
             const me_baloon = document.createElement('div');
             me_baloon.classList.add('me_baloon');
@@ -65,32 +71,59 @@ const seeMessage = (index) => {
             me_text.textContent = element.content
 
             me_baloon.append(me_text)
+
             container_baloons.append(me_baloon)
+
         }
         else {
             const other_baloon = document.createElement('div');
             other_baloon.classList.add('other_baloon');
 
             const other_text = document.createElement('h1')
-            other_text.classList.add('textTwo');
+            other_text.classList.add('text');
             other_text.textContent = element.content
 
             other_baloon.append(other_text)
+
             container_baloons.append(other_baloon)
         }
 
-        replaceChildren(container_baloons)
-    });
+        conversation__main.replaceChildren(container_baloons)
+    })
 
+
+    // contacts.messages.forEach(element=>{
+    //     if (element.sender){
+    //         const me_baloon = document.createElement('div');
+    //         me_baloon.classList.add('me_baloon');
+
+    //         const other_baloon = document.createElement('div');
+    //         other_baloon.classList.add('other_baloon');
+
+    //         if(element.sender == 'me'){
+
+    //             const me_text = document.createElement('h1')
+    //             me_text.classList.add('text');
+    //             me_text.textContent = element.content
+
+    //             me_baloon.append(me_text)
+    //         }
+    //         else{
+    //             const other_text = document.createElement('h1')
+    //             other_text.classList.add('text');
+    //             other_text.textContent = element.content
+
+    //             other_baloon.append(other_text)
+    //         }
+
+    //         container_baloons.replaceChildren(me_baloon)
+    //     }
+
+    // })
 
 }
 
 const loadContacts = () => {
-    
-    // const url = `http://localhost:8080/v1/whats/contatos/?id=2`
-    // const response = await fetch(url)
-    // const contatos = await response.json()
-    
     const container = document.getElementById('chat')
     const cards = contatos.map(createCard)
 

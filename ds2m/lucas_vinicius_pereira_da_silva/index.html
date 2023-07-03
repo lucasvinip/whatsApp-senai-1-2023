@@ -2,26 +2,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"
+    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+    >
 
+    <link rel="preconnect" href="https://fonts.googleapis.com"
+    >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin
+    >
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"
+    >
 
+    <link rel="stylesheet" href="./css/reset.css"
+    >
+    <link rel="stylesheet" href="./css/style.css"
+    >
+    <link rel="stylesheet" href="./css/container.css"
+    >
+    <link rel="stylesheet" href="./css/menu.css"
+    >
+    <link rel="stylesheet" href="./css/searchChat.css"
+    >
+    <link rel="stylesheet" href="./css/chat.css"
+    >
+    <link rel="stylesheet" href="./css/conversation.css"
+    >
+    <link rel="stylesheet" href="./css/responsividade.css"
+    >
+    <link rel="stylesheet" href="./css/typeMessage.css"
+    >
 
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/container.css">
-    <link rel="stylesheet" href="./css/menu.css">
-    <link rel="stylesheet" href="./css/searchChat.css">
-    <link rel="stylesheet" href="./css/chat.css">
-    <link rel="stylesheet" href="./css/conversation.css">
-    <link rel="stylesheet" href="./css/responsividade.css">
-
-    <script src="https://kit.fontawesome.com/4ea9540e8d.js" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4ea9540e8d.js" crossorigin="anonymous"
+    >
     </script>
-    <script src="./index.js" defer type="module">
+    <script src="./index.js" defer type="module"
+    >
     </script>
 
-    <link rel="shortcut icon" href="./img/whatsapp.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./img/whatsapp.ico" type="image/x-icon"
+    />
     <title>WhatsApp</title>
 </head>
 
@@ -54,7 +74,6 @@
                 <div class="search__chat">
                     <div>
                         <input type="text" placeholder="Search or start new chat">
-                        <ion-icon name="search-outline"></ion-icon>
                     </div>
                 </div>
                 <div class="chat" id="chat">
@@ -64,12 +83,11 @@
             <div class="conversation d-none" id="conversation">
                 <div class="conversation__header">
                     <div class="photo__conversation">
-                        <img src="" alt="img" class="img__conversation">
+                        <img src="" alt="img" class="img__conversation" id="img__conversation">
                     </div>
                     <div class="conversation__name">
                         <h4 id="name__conversation"></h4>
                     </div>
-
                     <div class="conversation__icon">
                         <div class="conversation__icons">
                             <a href="#">
@@ -81,14 +99,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="conversation__main">
-                    <div id="baloons">
-
-                    </div>
+                <div class="conversation__main" id="conversation__main">
+                    <!-- <div id="baloons" class="baloons">
+                        
+                    </div> -->
                 </div>
                 <div class="conversation__footer">
-                    <div class="write">
-                        <input type="Type a message" class="typeMessage">
+                    <div class="typeMessage">
+                        <img src="./img/zap.jpg" alt="photo" class="photo__profile">
+                        <input type="text" placeholder="Type a message">
                     </div>
                 </div>
             </div>
