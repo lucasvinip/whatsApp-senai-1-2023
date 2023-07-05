@@ -3,7 +3,7 @@ body{
     background-color:#d1d7db;
     display: grid;
     grid-template-areas: 'content';
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header{

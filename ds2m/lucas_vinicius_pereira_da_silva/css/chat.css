@@ -8,6 +8,12 @@
     height: 9vh;
     display: flex;
     padding-top: 10px;
+    border-top: 1px solid #d1d7db;
+    
+}
+.chat__box:hover{
+    content: "";
+    background-color: #d1d7db;
 }
 
 .photo__chat{
@@ -36,11 +42,4 @@ h5{
 h6{
     font-size: 0.6rem;
     width: 8vw;
-}
-
-.linha{
-    display: flex;
-    background-color: #e9edef;
-    width: 20.7vw;
-    height: 0.1vh;
 }

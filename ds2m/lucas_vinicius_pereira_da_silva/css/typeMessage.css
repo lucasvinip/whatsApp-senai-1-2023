@@ -2,12 +2,13 @@
     position: relative;
     width: 100%;
     height: 50px;
-    background: #f6f6f6;
+    background: #e9edef;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 15px;
-    
+    gap: 6px;
+    border-top: 1px solid #e9edef;
 }
 
 .typeMessage div{
@@ -33,10 +34,14 @@
 .typeMessage input{
     width: 100%;
     outline: none;
-    border: none;
+    border: 1px solid #bbb;
     background: #fff;
     padding: 6px;
     height: 38px;
-    border-radius: 30px;
+    border-radius: 5px;
     font-size: 14px;
+}
+
+.typeMessage i{
+    color: #667781;
 }
